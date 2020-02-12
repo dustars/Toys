@@ -8,7 +8,24 @@ using namespace std;
 class MedianOfTwoSortedArrays : Solution {
 public:
 	double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+		//1. Decide which one is larger
+		vector<int>& large = nums1.size() >= nums2.size() ? nums1 : nums2;
+		vector<int>& small = nums1.size() >= nums2.size() ? nums2 : nums1;
 
+		auto printV = [](const vector<int>& vec) {for (auto&& i : vec) std::cout << i << ' '; };
+		printV(large);
+		std::cout << std::endl;
+		printV(small);
+		std::cout << std::endl;
+
+		if (small.size() == 0) {
+			// check wether the larger array is even size or odd size. 
+		}
+
+		unsigned int index = 0;
+		for (auto&& element : small) {
+			
+		}
 
 		return 0;
 	}
