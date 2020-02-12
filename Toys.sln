@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pathTracing_GL", "pathTracing_GL\pathTracing_GL.vcxproj", "{F6DFFD85-AB20-49FF-8308-635DEC278B5B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CplusplusLearning", "CplusplusLearning\CplusplusLearning.vcxproj", "{7CB69686-9A70-4789-9288-56E143F32487}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LeetCode", "LeetCode\LeetCode.vcxproj", "{A535F882-278A-4584-9FF9-90FEABF48093}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6DFFD85-AB20-49FF-8308-635DEC278B5B}.Debug|x64.ActiveCfg = Debug|x64
+		{F6DFFD85-AB20-49FF-8308-635DEC278B5B}.Debug|x64.Build.0 = Debug|x64
+		{F6DFFD85-AB20-49FF-8308-635DEC278B5B}.Debug|x86.ActiveCfg = Debug|Win32
+		{F6DFFD85-AB20-49FF-8308-635DEC278B5B}.Debug|x86.Build.0 = Debug|Win32
+		{F6DFFD85-AB20-49FF-8308-635DEC278B5B}.Release|x64.ActiveCfg = Release|x64
+		{F6DFFD85-AB20-49FF-8308-635DEC278B5B}.Release|x64.Build.0 = Release|x64
+		{F6DFFD85-AB20-49FF-8308-635DEC278B5B}.Release|x86.ActiveCfg = Release|Win32
+		{F6DFFD85-AB20-49FF-8308-635DEC278B5B}.Release|x86.Build.0 = Release|Win32
+		{7CB69686-9A70-4789-9288-56E143F32487}.Debug|x64.ActiveCfg = Debug|x64
+		{7CB69686-9A70-4789-9288-56E143F32487}.Debug|x64.Build.0 = Debug|x64
+		{7CB69686-9A70-4789-9288-56E143F32487}.Debug|x86.ActiveCfg = Debug|Win32
+		{7CB69686-9A70-4789-9288-56E143F32487}.Debug|x86.Build.0 = Debug|Win32
+		{7CB69686-9A70-4789-9288-56E143F32487}.Release|x64.ActiveCfg = Release|x64
+		{7CB69686-9A70-4789-9288-56E143F32487}.Release|x64.Build.0 = Release|x64
+		{7CB69686-9A70-4789-9288-56E143F32487}.Release|x86.ActiveCfg = Release|Win32
+		{7CB69686-9A70-4789-9288-56E143F32487}.Release|x86.Build.0 = Release|Win32
+		{A535F882-278A-4584-9FF9-90FEABF48093}.Debug|x64.ActiveCfg = Debug|x64
+		{A535F882-278A-4584-9FF9-90FEABF48093}.Debug|x64.Build.0 = Debug|x64
+		{A535F882-278A-4584-9FF9-90FEABF48093}.Debug|x86.ActiveCfg = Debug|Win32
+		{A535F882-278A-4584-9FF9-90FEABF48093}.Debug|x86.Build.0 = Debug|Win32
+		{A535F882-278A-4584-9FF9-90FEABF48093}.Release|x64.ActiveCfg = Release|x64
+		{A535F882-278A-4584-9FF9-90FEABF48093}.Release|x64.Build.0 = Release|x64
+		{A535F882-278A-4584-9FF9-90FEABF48093}.Release|x86.ActiveCfg = Release|Win32
+		{A535F882-278A-4584-9FF9-90FEABF48093}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D0D71A0-B539-4A51-A9C9-6FB32746A9ED}
+	EndGlobalSection
+EndGlobal
