@@ -3,7 +3,7 @@
 
 int main() {
 
-	Question4();
+	Question94();
 
 	return 0;
 }

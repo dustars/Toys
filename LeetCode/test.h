@@ -4,11 +4,23 @@
 
 using namespace std;
 
+void Question94() {
+	InorderTraversalBTree solution;
+
+	TreeNode* root = new TreeNode(1);
+	root->right = new TreeNode(2);
+	root->right->left = new TreeNode(3);
+	solution.inorderTraversal(root);
+	for (auto&& element : solution.result) {
+		cout << element << " ";
+	}
+}
+
 void Question4() {
 	MedianOfTwoSortedArrays solution;
 
-	vector<int> nums1({ 1, 3 });
-	vector<int> nums2({ 2 });
+	vector<int> nums1({ 1, 3, 5, 7, 9,9,9,9});
+	vector<int> nums2({});
 
 	int result = solution.findMedianSortedArrays(nums1, nums2);
 	print("The median is: ", false);

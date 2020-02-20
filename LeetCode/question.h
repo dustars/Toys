@@ -5,6 +5,28 @@
 
 using namespace std;
 
+struct TreeNode {
+	int val;
+	TreeNode* left;
+	TreeNode* right;
+	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+	
+};
+
+class InorderTraversalBTree : Solution {
+public:
+	vector<int> inorderTraversal(TreeNode* root) {
+		if (root) {
+			inorderTraversal(root->left);
+			result.push_back(root->val);
+			inorderTraversal(root->right);
+		}
+		return result;
+	}
+
+	vector<int> result;
+};
+
 class MedianOfTwoSortedArrays : Solution {
 public:
 	double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
@@ -13,19 +35,21 @@ public:
 		vector<int>& small = nums1.size() >= nums2.size() ? nums2 : nums1;
 
 		auto printV = [](const vector<int>& vec) {for (auto&& i : vec) std::cout << i << ' '; };
-		printV(large);
-		std::cout << std::endl;
-		printV(small);
-		std::cout << std::endl;
-
-		if (small.size() == 0) {
-			// check wether the larger array is even size or odd size. 
-		}
-
-		unsigned int index = 0;
-		for (auto&& element : small) {
+		//printV(large);
+		//std::cout << std::endl;
+		//printV(small);
+		//std::cout << std::endl;
+		
+		if (!(large.size() % 2)) {
 			
 		}
+
+
+		if (!small.size()){
+			return (large.size() % 2) == 0 ? ((large[large.size() / 2]) + (large[(large.size() / 2) - 1])) / 2 : large[(large.size() - 1)/2];
+		}
+
+
 
 		return 0;
 	}
