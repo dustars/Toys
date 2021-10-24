@@ -1,22 +1,26 @@
-#include <iostream>
-#include <numeric>
-#include <vector>
-#include "oopLearning.h"
+ï»¿/*
+ * å¦‚é¡¹ç›®åï¼Œè¿™ä¸ªæ˜¯ä¸€ä¸ªå­¦ä¹ C++çš„åœ°æ–¹ï¼Œç”¨æå…¶ç®€å•çš„small caseså»å­¦ä¹ æŸä¸ªfeatureçš„ç”¨æ³• 
+ * å•ç‹¬ä½œä¸ºå¤´æ–‡ä»¶çš„featureç›¸å¯¹å¤æ‚ï¼Œå°çš„éƒ½ä¼šæ”¾åœ¨misc.hæ–‡ä»¶ä¸­ã€‚
+ * æ³¨é‡Šä¸­æ‰“å¼•å·""çš„åœ°æ–¹ï¼Œæ‘˜æŠ„è‡ªæˆ‘è®¤ä¸ºå¯ä»¥å¸®åŠ©ç†è§£featureæ ¸å¿ƒæˆ–è®¾è®¡ç†å¿µçš„å¥å­ï¼Œæ¥æºå¾ˆå¹¿
+ */
+
+#include "TemplateClass.h"
+#include "Type.h"
 
 class book;
 
 class person {
 public:
 	typedef book mybook;
-	void Printname(const book& b); //×÷ÎªËûÈËµÄFriend£¬ÒªÊ¹ÓÃËûÈËÊ±£¬ËûÈË±ØĞëÏÈ±»defined£¬ËùÒÔÕâ¸öfunction±¾ÉíÒªÔÚËûÈËÖ®ºódefine
+	void Printname(const book& b);
 	mybook IhaveABook(book& b);
 private:
 	mybook* bookmy = nullptr;
 };
 
 class book {
-	friend void PrintBookName(book b);				//×¢ÒâÁ½¸öfriendµÄÇø±ğ£¬classºÍnonmember functionsÀàËÆ£¬µ«ÏÂÃæÕâ¸ö³ıÍâ
-	friend void person::Printname(const book& b);	//Õâ¸ö·Ç³£tricky£¬ÓÈÆä×¢ÒâdeclarationºÍdefintion£¬Ë³Ğò´í£¬¾ÍÎŞ·¨±àÒë
+	friend void PrintBookName(book b);
+	friend void person::Printname(const book& b);
 	friend void PrintBookNameInside(book b) {
 		std::cout << b.name << std::endl;
 	}
@@ -31,7 +35,6 @@ public:
 private:
 	std::string name;
 	std::string author;
-	//book b; //Õâ¾ÍÊÇÌ×ÍŞ£¬±àÒëÆ÷Ò»²ãÒ»²ãµØÏÂÈ¥£¬ÊÇÎŞÊı²ãµÄbook¶¨Òå£¬ËùÒÔ²»±»ÔÊĞí£¬µ«PointerºÍreference¿ÉÒÔ
 
 	static unsigned short int numBooks;			//Non-const static members are initialized outside the class body
 	static constexpr int noLettersOfBook = 50;	//const static members are initialized inside the class body
@@ -43,13 +46,12 @@ constexpr int noLettersOfBook = 50;
 
 class comicBook : book {
 public:
-	comicBook(std::string _type = "N/A") : book(), type(_type) {}; //×¢ÒâÕâÀïµÄconstructor£¬È«ÊÇ¾«»ª
+	comicBook(std::string _type = "N/A") : book(), type(_type) {};
 	void printType() const { std::cout << type << std::endl; }
 private:
 	std::string type;
 };
 
-//¼Ç×¡ÕâÀïµÄperson::mybook£¬ÎªÊ²Ã´Òª¼Óperson£¬ÒòÎªscopeµÄ¹ØÏµ£¬×¢ÒâÉÏÃæClass¶¨ÒåÖĞµÄtypedef
 person::mybook person::IhaveABook(book& b) {
 	bookmy = &b;
 	return *bookmy;
@@ -64,7 +66,7 @@ void PrintBookName(book b) {
 	std::cout << b.name << std::endl;
 }
 
-void PrintBookNameInside(book b); // ±ØĞëdeclare²ÅÄÜÊ¹ÓÃ£¬²»È»defineÔÚclassÄÚ£¬Ò²»áÊÇClassµÄscope
+void PrintBookNameInside(book b);
 
 static std::vector<std::string> vec = { "1", "2", "3" ,"4" ,"5","6","7","8","9","0"};
 
@@ -142,6 +144,7 @@ int main()
 	//int (*ftp)(int, int) = &add;
 	//std::cout << add("Hgg", "Haaa") << std::endl;
 	//test();
+	TypeofAndDecltype();
 
 	return 0;
 }
